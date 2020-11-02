@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<job maxFilesPerProcess="25" fileListSyntax="xrootd" simulateSubmission="false" >
+	<command>
+        starver SL20a
+        echo star version: $STAR_VERSION
+        root4star -l -q -b run.C\(-1,\"${FILELIST}\",\"${JOBID}\"\)
+        echo star version: $STAR_VERSION
+	</command>
+    <stdout URL="file:./sums/out/$JOBID" />	
+    <stderr URL="file:./sums/err/$JOBID" />
+
+    <!-- set the output location for these files to be copied to --> 
+    <output fromScratch="*.root" 
+        toURL="file:/gpfs/mnt/gpfs01/star/pwg/dstewart/outroot/AN/PicoToJetsExample_Small/"/>
+
+    <!-- this is the cataloge call to get teh st_physics files from p+Au 200 GeV -->
+    <!-- also modify the "all" to some number for a smaller data set -->
+
+	<input URL="catalog:star.bnl.gov?events!=0,library=SL20a,production=P16id,filetype~picoDst,collision=pAu200,sname2=st_physics||st_physics_adc,year=2015,available=1,storage!=hpss,sanity=1" nFiles="all" preferStorage="local"/>
+
+	<SandBox installer="ZIP">
+        <Package> 
+            <File>file:./run.C</File>
+			<File>file:./StRoot</File>
+            <File>file:./.sl73_gcc485</File>
+		</Package>		
+	</SandBox>
+	
+	<Generator>
+        <Location>./sums/input/</Location>
+        <ScriptLocation>./sums/input/</ScriptLocation>
+        <ListLocation>./sums/input/</ListLocation>
+	</Generator>
+
+</job>
