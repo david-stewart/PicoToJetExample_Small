@@ -1,4 +1,6 @@
 # Introduction
+This whole file is located locally on RCAS under /star/u/djs232/AN/PicoToJetsExample_Small
+
 This directory is meant as a short example to:
     * read PicoDst files from the server
     * make charged jets
@@ -57,13 +59,13 @@ Here are some notes.
     be generated in these directories
 
 # How to use this code:
-    Compile the code with `./cons` or `./make` 
-    Run `./test.csh` 
-    If you get an output `test.root` file, it all works.
+ Compile the code with `./cons` or `./make` 
+ Run `./test.csh` 
+ If you get an output `test.root` file, it all works.
 
-    Play with the code under `./StRoot/RunData/RunData.{h,cxx}` to get
-    different output.  When you want to run something larger, modify sums.xml
-    to output the larger output to your preferred directory, and to git the
-    desired number of input files, and run `star-submit sums.xml`
+ Play with the code under `./StRoot/RunData/RunData.{h,cxx}` to get
+ different output.  When you want to run something larger, modify sums.xml
+ to output the larger output to your preferred directory, and to git the
+ desired number of input files, and run `star-submit sums.xml`
 
 
