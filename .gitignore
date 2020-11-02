@@ -2,3 +2,5 @@ fastjet
 _x.cxx
 _h.h
 *.root
+StRoot/RunData/.consign
+linted_picos.list
