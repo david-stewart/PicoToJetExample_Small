@@ -21,7 +21,7 @@ Here are some notes.
     from inside of vim (which locally populates Vim's clist with 
     all the compile errors -- but if Vim's not your thing, then 
     this doesn't help at all...)
-2. _x.cxx and _h.h:
+2. (not saved on github.com): _x.cxx and _h.h:
     These are just sybolic links pointing to the actual code 
     under StRoot/RunData/RunData{.h,.cxx}
 3. run.C:
@@ -38,18 +38,18 @@ Here are some notes.
     *You should change the output file location* 
 
     *You should also adjust the nFiles=all to nFiles=<number you pick>*
-6. fastjet:
+6. (not saved on github.com) fastjet:
     This is a link to a copy of fastjet's library. You will probably have to 
     regenerate this link. The command:
     `ln -s /direct/star+u/djs232/software/fastjet-install/include/fastjet fastjet`
     if run in your local directory works 
-7.  StRoot:
+7. StRoot:
     This contains the actual code (see above under _x.cxx and _h.h)
-8.  linted_picos.list:
+8. linted_picos.list:
     You can always delete this file. It is generated locally each time the run.C 
     script is run. It deals with formating this picoDst list passed from sums.xml.
     It is possible that it is no longer needed
-9.  test.list:
+9. test.list:
     This file contains a short list of picoDst's that can be used when testing
     you're file when running the test.csh script.
 10. sums/{input,err,out}:
