@@ -16,8 +16,8 @@ Here are some notes.
     cons is RCAS's local facility to make you code with the c++ compiler.
     It is nice because it will do all the linking to the StRoot code
 
-    So you can compile you'r code with `./make` which will run `./cons`
-    or you can just use `./cons` directly. It is the same thing.
+    So you can compile you'r code with `make` which will run `./cons`
+    or you can just use `cons` directly. It is the same thing.
 
     I have it locally because it plays nice with the :Make command
     from inside of vim (which locally populates Vim's clist with 
